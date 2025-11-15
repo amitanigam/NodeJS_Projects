@@ -1,0 +1,25 @@
+{
+  "name": "expressjs_task",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Amita",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "tailwind": "tailwindcss -i ./views/input.css -o ./public/output.css --watch",
+    "dev": "concurrently -n TAILWIND,NODEMON -c cyan,green \"npm:tailwind\" \"npm:start\""
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.22",
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.10",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.17"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0"
+  }
+}
